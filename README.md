@@ -10,8 +10,7 @@ The working function can be found in the ./R directory. Users can clone this rep
 The purpose of this project is to create a method that allows users to download files from OneDrive and read them into R.  
 
 First we need to generate a file that will be shared.
-
-```{r CreateDataFile}
+```{r}
 x1 <- data.frame(
    A = rnorm(30,5,1.23),
    B = runif(30,1,10),
@@ -21,6 +20,8 @@ x1 <- data.frame(
 write.csv(x1 , file = "data/Data_file.csv", row.names = FALSE)
 dim(read.csv("./data/Data_file.csv"))
 ```
+
+
 After reading numerous forums a [microsoft techcommunity](https://techcommunity.microsoft.com/t5/OneDrive-for-Business/Get-direct-download-link-of-a-file-in-OneDrive-for-Business/m-p/149766) query lead me to this solution.
 
 Once the file was synced to OneDrive I obtained the following shared link:
