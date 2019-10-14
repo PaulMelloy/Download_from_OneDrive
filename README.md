@@ -21,6 +21,7 @@ x1 <- data.frame(
 write.csv(x1 , file = "data/Data_file.csv", row.names = FALSE)
 dim(read.csv("./data/Data_file.csv"))
 ```
+After reading numerous forums a [microsoft techcommunity](https://techcommunity.microsoft.com/t5/OneDrive-for-Business/Get-direct-download-link-of-a-file-in-OneDrive-for-Business/m-p/149766) query lead me to this solution.
 
 Once the file was synced to OneDrive I obtained the following shared link:
 
