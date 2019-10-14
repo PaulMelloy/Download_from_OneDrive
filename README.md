@@ -3,7 +3,7 @@ Provides an R function to download csv files and import them into R from OneDriv
 
 ## Getting started
 
-The working function can be found in the ./R directory. Users can clone this repo and use `source("*insert_filepath_here./R/OD_DL_csv.r"")`.
+The working function can be found in the ./R directory. Users can clone this repository and use `source("*insert_filepath_here./R/OD_DL_csv.r"")`.
 
 ## Method for developing code
 
