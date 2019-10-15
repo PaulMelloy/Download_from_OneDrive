@@ -22,19 +22,22 @@ dim(read.csv("./data/Data_file.csv"))
 ```
 
 
-After reading numerous forums a [microsoft techcommunity](https://techcommunity.microsoft.com/t5/OneDrive-for-Business/Get-direct-download-link-of-a-file-in-OneDrive-for-Business/m-p/149766) query lead me to this solution.
+After reading numerous forums a [microsoft techcommunity](https://techcommunity.microsoft.com/t5/OneDrive-for-Business/Get-direct-download-link-of-a-file-in-OneDrive-for-Business/m-p/149766) query lead me to this solution.  
 
-Once the file was synced to OneDrive I obtained the following shared link:
+Once the file was synced to OneDrive I obtained the following shared link:  
 
-Original link
-https://usqprd-my.sharepoint.com/:x:/g/personal/username_usq_edu_au/EdPkNrBkMNJMgwPZKajMxXgBMwyMdzz24-Ra6GH0HUCuaQ?e=MzwFXC
+Original link  
+https://usqprd-my.sharepoint.com/:x:/g/personal/username_usq_edu_au/EdPkNrBkMNJMgwPZKajMxXgyMdzz24-Ra6GH0HUCuaQ?e=MzwFXC
 
-replace end with download=1 after ?
-https://usqprd-my.sharepoint.com/:x:/g/personal/username_usq_edu_au/EdPkNrBkMNJMgwPZKajMxXgBMwyMdzz24-Ra6GH0HUCuaQ?download=1
+replace end with download=1 after ?  
+https://usqprd-my.sharepoint.com/:x:/g/personal/username_usq_edu_au/EdPkNrBkMNJMgwPZKajMxXgyMdzz24-Ra6GH0HUCuaQ?download=1  
 
-This works!!!!
+> This works!!!!  
 
-### Now to make a function
+*Well this exact code might not work for you as I have edited out my username the url*  
+But please try a shared link of your own
+
+### Now to make a function  
 
 ```{r Download_function}
 OD_DL_csv <- function(sharedURL, file_name, save2wd = FALSE){
@@ -71,7 +74,7 @@ OD_DL_csv <- function(sharedURL, file_name, save2wd = FALSE){
 
 ```{r test_function}
 
-test1 <- OD_DL_csv(sharedURL = "https://usqprd-my.sharepoint.com/:x:/g/personal/u8011054_usq_edu_au/EdPkNrBkMNJMgwPZKajMxXgBMwyMdzz24-Ra6GH0HUCuaQ?e=MzwFXC",
+test1 <- OD_DL_csv(sharedURL = "https://usqprd-my.sharepoint.com/:x:/g/personal/username_usq_edu_au/EdPkNrBkMNJMgwPZKajMxXgyMdzz24-Ra6GH0HUCuaQ?e=MzwFXC",
           file_name = "testing.csv"
           )
 
@@ -80,7 +83,7 @@ head(test1)
 
 # test copy to directory
 
-test1 <- OD_DL_csv(sharedURL = "https://usqprd-my.sharepoint.com/:x:/g/personal/u8011054_usq_edu_au/EdPkNrBkMNJMgwPZKajMxXgBMwyMdzz24-Ra6GH0HUCuaQ?e=MzwFXC",
+test1 <- OD_DL_csv(sharedURL = "https://usqprd-my.sharepoint.com/:x:/g/personal/username_usq_edu_au/EdPkNrBkMNJMgwPZKajMxXgyMdzz24-Ra6GH0HUCuaQ?e=MzwFXC",
           file_name = "testing.csv",
           save2wd = TRUE)
 
